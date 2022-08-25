@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'Manrope';
+	src: url('../fonts/Manrope-VariableFont_wght.eot');
+	src: local('☺'), url('../fonts/Manrope-VariableFont_wght.woff') format('woff'), url('fonts/Manrope-VariableFont_wght.ttf') format('truetype'), url('fonts/Manrope-VariableFont_wght.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 *,
 *::before,
 *::after {
@@ -32,9 +41,9 @@ html {
 body {
 	height: 100%;
 	line-height: 1;
-	font-family: Manrope;
 	color: #333333;
 	background: #FFFFFF;
+	font-family: Manrope;
 }
 .wrapper-page {
 	min-height: 100%;
@@ -42,14 +51,19 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-.header {}
-.header__container {
+.header {
+	font-weight: 800;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto; /* выставил по центру */
+}
+.header-top {
 	display: flex;
 	justify-content: space-between;
 	padding: 15px;
 }
 .header__logo {
-	height: 64px;
 	width: 296px;
 	border-radius: 15px;
 	text-align: center;
@@ -57,10 +71,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 15px;
 }
 .header__address {
-	height: 64px;
 	width: 232px;
 	border-radius: 15px;
 	text-align: center;
@@ -68,10 +80,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 15px;
 }
 .header__connection {
-	height: 64px;
 	width: 197px;
 	border-radius: 15px;
 	text-align: center;
@@ -79,7 +89,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 15px;
+}
+.header-bottom {
+	padding: 15px;
 }
 .header__menu {
 }
@@ -93,7 +105,6 @@ body {
 	height: 64px;
 	border-radius: 15px;
 	background-color: #FFFFFF;
-	margin-left: 15px;
 }
 .menu__link {
 }
@@ -106,22 +117,42 @@ body {
 	flex: 1 1 auto;
 }
 
-[class*="__container"]{
-	max-width: 1200px;
-	margin: 0 auto; /* выставил по центру */
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.footer__social {
 }
+.social__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.social__item {
+	min-width: 64px;
+	height: 64px;
+	border-radius: 15px;
+	background-color: #FFFFFF;
+}
+.social__link {
+}
+.social__link img {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 15px;
+}
+
 @media (max-width: 1023.98px){
-	[class*="__container"] {
+	.container {
 		max-width: 768px;
 	}
 }
 @media (max-width: 767.98px){
-	[class*="__container"] {
+	.container {
 		max-width: 576px;
 	}
 }
 @media (max-width: 575.98px){
-	[class*="__container"] {
+	.container {
 		max-width: none;
 	}
 }
