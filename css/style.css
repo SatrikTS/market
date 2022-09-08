@@ -113,13 +113,13 @@ body {
 	bottom: 0;
 }
 /* ----------------при активации----------------- */
-.burger--active .burger__line--first, .burger--active .burger__line--fourth {
+.is-active .burger__line--first, .is-active .burger__line--fourth {
 	opacity: 0;
 }
-.burger--active .burger__line--second {
+.is-active .burger__line--second {
 	transform: translateY(-50%) rotate(45deg);
 }
-.burger--active .burger__line--third {
+.is-active .burger__line--third {
 	transform: translateY(-50%) rotate(-45deg);
 }
 /* ------------------------------------ */
@@ -186,6 +186,8 @@ body {
 .niche-card__img {
 	margin-bottom: 5px;
 }
+.card-link {}
+
 .niche-card__img img {
 	height: 113px;
 	width: 113px;
