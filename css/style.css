@@ -33,7 +33,9 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
-	font-size: x-large;
+}
+h1 {
+	font-size: 36px;
 }
 html {
 	height: 100%;
@@ -152,8 +154,7 @@ body {
 /* ----------------------------------- */
 .category-elevation {
 	display: flex;
-	min-width: 216px;
-	border-radius: 15px;
+	min-width: fit-content;
 	justify-content: center;
 	background-color: #AFDBE7;
 	padding: 5px;
@@ -161,13 +162,15 @@ body {
 }
 .elevation {
 	display: flex;
-	width: 100%;
 }
 .elevation__list {}
 .elevation__item {
 	padding: 5px;
 }
-.elevation__link {}
+.elevation__link {
+	display: block;
+	width: 100%;
+}
 /* ------------------------------------- */
 .category-niches {
 	display: flex;
@@ -177,9 +180,8 @@ body {
 	left: 0;
 }
 .niche-card {
-	width: 123px;
+	width: 23%;
 	background-color: #AFDBE7;
-	border-radius: 15px;
 	padding: 5px;
 	margin: 5px;
 }
@@ -189,8 +191,6 @@ body {
 .card-link {}
 
 .niche-card__img img {
-	height: 113px;
-	width: 113px;
 }
 .niche-card__title {
 	margin-bottom: 5px;
@@ -207,13 +207,11 @@ body {
 }
 .brand-card {
 	background-color: #AFDBE7;
-	border-radius: 15px;
 	margin: 5px;
 }
 .brand-card__img {
 }
 .brand-card__img img {
-	border-radius: 15px;
 }
 .brand-card__link {
 }
@@ -221,25 +219,27 @@ body {
 .advise-block {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	margin: 5px;
 	padding-bottom: 10px;
 	margin-top: 30px;
 }
 .advise-title {
+	display: flex;
+	justify-content: center;
 	text-align: center;
-	size: 40px;
+	padding: 5px;
 }
 .advise-info {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	margin-top: 30px;
 }
 .partner-card {
 	background-color: #AFDBE7;
-	border-radius: 15px;
 	padding: 5px;
 	margin: 5px;
 }
@@ -254,6 +254,67 @@ body {
 .partner-card__title {
 	text-align: center;
 }
+/* +++++++++++++++++postman+++++++++++++++++++++++++++++ */
+.delivery {
+	margin: 30px 10px 0px 10px;
+}
+.delivery-title {
+	text-align: center;
+	size: 40px;
+}
+.delivery-info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20px;
+}
+/* ============================ */
+/* Стиль вкладки */
+.tab {
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #257187;
+}
+
+ /* Стиль кнопок, которые используются для открытия содержимого вкладки */
+.tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	color: #FFC58A;
+	margin: 0px 25px;
+	font-size: x-large;
+}
+
+ /* Изменение цвета фона кнопок при наведении курсора */
+.tab button:hover {
+	background-color: #ddd;
+}
+
+ /* Создание активного/текущего класса связи вкладки */
+.tab button.active {
+	background-color: #ccc;
+}
+
+ /* Стиль содержимого вкладки */
+.tabcontent {
+	display: none;
+	justify-content: center;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+/* ============================= */
+.postman-card {
+}
+.postman-card__img img {
+}
 /*-------------------------GEO----------------------------------------*/
 .geo-block {
 	display: flex;
@@ -263,46 +324,26 @@ body {
 	padding-bottom: 10px;
 	margin-top: 30px;
 }
-/* ------------------------------------ */
-.geo-postman {
-	margin: 5px;
-}
-.postman-title {
-	text-align: center;
-	size: 40px;
-}
-.postman-info {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.postman-card {
-	background-color: #AFDBE7;
-	border-radius: 15px;
-	margin: 30px 5px 0px 5px;
-}
-.postman-card__img img {
-	width: ;
-	border-radius: 15px;
-}
-/* -------------------------------- */
 .geo-location {
 	display: flex;
 	margin: 5px;
 }
 .location {
-	border-radius: 15px;
 	padding: 5px;
 }
 .location iframe {
 	background-color: #AFDBE7;
-	border-radius: 15px;
 }
 /* +++++++++++++++++++++++++++++++FOOTER++++++++++++++++++++++ */
 .footer {
 	background-color: #257187;
 }
 /* ---------------------------------------- */
+.footer-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+/* ------------------------------------------ */
 .footer-block {
 	display: flex;
 	flex-wrap: wrap;
@@ -310,36 +351,77 @@ body {
 	margin: 5px;
 	padding-bottom: 10px;
 }
-/* ---------------------------------------------- */
-.general {
-	min-width: 186px;
-	border-radius: 15px;
+/* ----------------------safety------------------------ */
+.safety {
+	display: flex;
+	flex-direction: column;
 	justify-content: flex-start;
-	background-color: #AFDBE7;
+	color: #FFC58A;
 	padding: 5px;
-	margin: 5px;
+	margin: 15px;
 }
-.info {
+.safety-title {
+	display: flex;
 }
-.info__list {
+.safety-info {
+	display: flex;
 }
-.info__item {
+.safety__list {
+}
+.safety__item {
+	padding-top: 10px;
+	position: relative;
+}
+.safety__link {
+	color: #FFC58A;
+}
+/* --------------------------ourcompany--------------------- */
+.ourcompany {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #FFC58A;
 	padding: 5px;
+	margin: 15px;
 }
-.info__link {
+.ourcompany-title {
+	display: flex;
 }
-/* ----------------------------------------------- */
-.category-elevation {
+.ourcompany-info {
+	display: flex;
 }
-.elevation {
+.ourcompany__list {
 }
-.elevation__list {
+.ourcompany__item {
+	padding-top: 10px;
 }
-.elevation__item {
+.ourcompany__link {
+	color: #FFC58A;
 }
-.elevation__link {
+/* -------------------------workwithus------------------------ */
+.workwithus {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #FFC58A;
+	padding: 5px;
+	margin: 15px;
 }
-/* -------------------------------------------------- */
+.workwithus-title {
+	display: flex;
+}
+.workwithus-info {
+}
+.workwithus__list {
+}
+.workwithus__item {
+	padding-top: 10px;
+}
+.workwithus__link {
+	color: #FFC58A;
+}
+/* --------------------------------------------------- */
+/* -----------------------social--------------------------- */
 .social {
 }
 .social__list {
@@ -350,8 +432,6 @@ body {
 .social__item {
 	width: 40px;
 	height: 40px;
-	border-radius: 15px;
-	background-color: #FFFFFF;
 	margin: 5px;
 }
 .social__link {
@@ -359,8 +439,17 @@ body {
 .social__link img {
 	max-width: 100%;
 	max-height: 100%;
-	border-radius: 15px;
 }
+/* -------------------------footer-copy------------------ */
+.footer-copy {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+}
+.copy {
+	color: #FFC58A;
+}
+/* ----------------------------------- */
 @media (max-width: 1023.98px){
 	.container {
 		max-width: 768px;
@@ -394,6 +483,9 @@ body {
 	.category-niches {
 		justify-content: center;
    }
+	.niche-card {
+		width: 30%;
+	}
 }
 @media (max-width: 575.98px){
 	.container {

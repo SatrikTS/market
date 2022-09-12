@@ -22,11 +22,11 @@
 							</div>
 							<nav class="menu">
 								<ul class="menu__list">
-									<li><a href="#" class="menu__link">Главная</a></li>
-									<li><a href="#" class="menu__link">О нас</a></li>
-									<li><a href="#" class="menu__link">Каталог</a></li>
-									<li><a href="#" class="menu__link">Акция</a></li>
-									<li><a href="#" class="menu__link">Контакты</a></li>
+									<li><a href="#" class="menu__link"><h3>Главная</h3></a></li>
+									<li><a href="#" class="menu__link"><h3>О нас</h3></a></li>
+									<li><a href="#" class="menu__link"><h3>Каталог</h3></a></li>
+									<li><a href="#" class="menu__link"><h3>Акция</h3></a></li>
+									<li><a href="#" class="menu__link"><h3>Контакты</h3></a></li>
 								</ul>
 							</nav>
 						</div>
@@ -41,12 +41,12 @@
 								<ul class="elevation__list">
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											Инструмент
+											<h3>Инструмент</h3>
 										</a>
 									</li>
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											Ручной инструмент
+											<h3>Ручной инструмент</h3>
 										</a>
 									</li>
 									<li class="elevation__item">
@@ -56,37 +56,22 @@
 									</li>
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											DВсе для сада
+											<h3>Все для сада</h3>
 										</a>
 									</li>
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											расходка
+											<h3>расходка</h3>
 										</a>
 									</li>
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											Спецодежда и СИЗ
+											<h3>Спецодежда и СИЗ</h3>
 										</a>
 									</li>
 									<li class="elevation__item">
 										<a href="#" class="elevation__link">
-											Электрика и свет
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
+											<h3>Электрика и свет</h3>
 										</a>
 									</li>
 								</ul>
@@ -395,42 +380,61 @@
 							</div>
 						</section>	
 					</div>
-					<div class="geo-block">
-						<div class="geo-postman">
-							<div class="postman-title">
-								<h2>Способы Доставки</h2>
+					<div class="delivery">
+						<div class="delivery-title">
+							<h2>Способы Доставки</h2>
+						</div>
+						<div class="delivery-info">
+							<!-- Ссылки вкладки -->
+							<div class="tab">
+								<button class="tablinks" onclick="openPost(event, 'ruspost')">Почта Росси</button>
+								<button class="tablinks" onclick="openPost(event, 'cdek')">CDEK</button>
+								<button class="tablinks" onclick="openPost(event, 'sevex')">SEVeX</button>
 							</div>
-							<div class="postman-info">
-								<div class="postman-card">
-									<div class="postman-card__img">
-										<a href="#" class="postman-card__link">
-											<img src="img/image_post/rus_post.jpg" alt="rus_post">
-										</a>
+							
+							<!-- Содержимое вкладки -->
+							<div id="ruspost" class="tabcontent">
+								<div class="ruspost-block">
+									<h3>Почта Росси</h3>
+									<p>Почта России - лучшее, что у нас есть</p>
+									<div class="postman-card">
+										<div class="postman-card__img">
+											<a href="#" class="postman-card__link">
+												<img src="img/image_post/rus_post.jpg" alt="rus_post">
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="postman-card">
-									<div class="postman-card__img">
-										<a href="#" class="postman-card__link">
-											<img src="img/image_post/rus_post.jpg" alt="rus_post">
-										</a>
+							</div>
+							<div id="cdek" class="tabcontent">
+								<div class="cdek-block">
+									<h3>CDEK</h3>
+									<p>Лучше чем ничего</p>
+									<div class="postman-card">
+										<div class="postman-card__img">
+											<a href="#" class="postman-card__link">
+												<img src="img/image_post/rus_post.jpg" alt="rus_post">
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="postman-card">
-									<div class="postman-card__img">
-										<a href="#" class="postman-card__link">
-											<img src="img/image_post/rus_post.jpg" alt="rus_post">
-										</a>
-									</div>
-								</div>
-								<div class="postman-card">
-									<div class="postman-card__img">
-										<a href="#" class="postman-card__link">
-											<img src="img/image_post/rus_post.jpg" alt="rus_post">
-										</a>
+							</div>
+							<div id="sevex" class="tabcontent">
+								<div class="sevex-block">
+									<h3>SEVeX</h3>
+									<p>Никто не знает, но оно есть</p>
+									<div class="postman-card">
+										<div class="postman-card__img">
+											<a href="#" class="postman-card__link">
+												<img src="img/image_post/rus_post.jpg" alt="rus_post">
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="geo-block">
 						<div class="geo-location">
 							<div class="location">
 								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae306b251131bd551c8147954d7aeb49210f823051edad3c811b0dd9bd13bccf8&amp;source=constructor" width="536" height="536" frameborder="0"></iframe>
@@ -441,99 +445,93 @@
 			</main>
 			<footer class="footer">
 				<div class="container">
-					<div class="footer-block">
-						<section class="general">
-							<nav class="info">
-								<ul class="info__list">
-									<li class="info__item">
-										<a href="#" class="info__link">
-											полиика конфидециальности
+					<div class="footer-wrapper">
+						<div class="footer-block">
+							<section class="safety">
+								<div class="safety-title">
+									<h3>Безопасность</h3>
+								</div>
+								<nav class="safety-info">
+									<ul class="safety__list">
+										<li class="safety__item">
+											<a href="#" class="safety__link">
+												<h4>политика конфидециальности</h4>
+											</a>
+										</li>
+										<li class="safety__item">
+											<a href="#" class="safety__link">
+												<h4>согласие на обработку<br>
+												персональных данных</h4>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</section>
+							<section class="ourcompany">
+								<div class="ourcompany-title">
+									<h3>Наша Компания</h3>
+								</div>
+								<nav class="ourcompany-info">
+									<ul class="ourcompany__list">
+										<li class="ourcompany__item">
+											<a href="#" class="ourcompany__link">
+												<h4>О нас</h4>
+											</a>
+										</li>
+										<li class="ourcompany__item">
+											<a href="#" class="ourcompany__link">
+												<h4>правовая информация</h4>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</section>
+							<section class="workwithus">
+								<div class="workwithus-title">
+									<h3>Работа у нас</h3>
+								</div>
+								<nav class="workwithus-info">
+									<ul class="workwithus__list">
+										<li class="workwithus__item">
+											<a href="#" class="workwithus__link">
+												<h4>вакансии</h4>
+											</a>
+										</li>
+										<li class="workwithus__item">
+											<a href="#" class="workwithus__link">
+												<h4>сотрудничество</h4>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</section>
+							<nav class="social">
+								<ul class="social__list">
+									<li class="social__item">
+										<a href="https://vk.com/satrikts" class="social__link">
+											<img src="img/svg/vk.svg" alt="">
 										</a>
 									</li>
-									<li class="info__item">
-										<a href="#" class="info__link">
-											согласие на обработку персональных данных
+									<li class="social__item">
+										<a href="https://t.me/satrikTS" class="social__link">
+											<img src="img/svg/tlgrm.svg" alt="">
+										</a>
+									</li>
+									<li class="social__item">
+										<a href="tel:+79789898989" class="social__link">
+											<img src="img/svg/phone.svg" alt="">
 										</a>
 									</li>
 								</ul>
 							</nav>
-						</section>
-						<section class="category-elevation">
-							<nav class="elevation">
-								<ul class="elevation__list">
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Инструмент
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной инструмент
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Крепеж
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											DВсе для сада
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											расходка
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Спецодежда и СИЗ
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Электрика и свет
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
-										</a>
-									</li>
-									<li class="elevation__item">
-										<a href="#" class="elevation__link">
-											Ручной
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</section>
-						<nav class="social">
-							<ul class="social__list">
-								<li class="social__item">
-									<a href="https://vk.com/satrikts" class="social__link">
-										<img src="img/svg/vk.svg" alt="">
-									</a>
-								</li>
-								<li class="social__item">
-									<a href="https://t.me/satrikTS" class="social__link">
-										<img src="img/svg/tlgrm.svg" alt="">
-									</a>
-								</li>
-								<li class="social__item">
-									<a href="tel:+79789898989" class="social__link">
-										<img src="img/svg/phone.svg" alt="">
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+						</div>
+						<div class="footer-copy">
+							<h5 class="copy">Вы принимаете условия политики конфиденциальности и пользовательского соглашения каждый раз,
+								когда оставляете свои данные в любой форме обратной связи на сайте sevastools.ru<br>
+								© 2021 — 2022. sevastools.ru
+								</h5>
+						</div>
+					</div>	
 				</div>
 			</footer>
 			<script src="js/scripts.js"></script>
