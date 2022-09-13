@@ -137,12 +137,12 @@ body {
 }
 .menu__link {
 	color: #FFC58A;
-	font-size: 20px;
+	font-size: x-large;
 }
 /* +++++++++++++++++++++++  MAIN  ++++++++++++++++++++++++++++ */
 .page {
 	flex: 1 1 auto;
-	margin-top: 65px;
+	margin-top: 60px;
 }
 /* --------------------------CATEGORY------------------------- */
 .category-block {
@@ -168,8 +168,8 @@ body {
 	padding: 5px;
 }
 .elevation__link {
-	display: block;
 	width: 100%;
+	font-size: large;
 }
 /* ------------------------------------- */
 .category-niches {
@@ -180,17 +180,22 @@ body {
 	left: 0;
 }
 .niche-card {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	width: 23%;
 	background-color: #AFDBE7;
 	padding: 5px;
 	margin: 5px;
 }
 .niche-card__img {
+	text-align: center;
 	margin-bottom: 5px;
 }
 .card-link {}
 
 .niche-card__img img {
+	max-height: 70px;
 }
 .niche-card__title {
 	margin-bottom: 5px;
@@ -203,7 +208,7 @@ body {
 	justify-content: space-between;
 	margin: 5px;
 	padding-bottom: 10px;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .brand-card {
 	background-color: #AFDBE7;
@@ -298,8 +303,8 @@ body {
 }
 
  /* Создание активного/текущего класса связи вкладки */
-.tab button.active {
-	background-color: #ccc;
+.tab button.has-active {
+	background-color: red;
 }
 
  /* Стиль содержимого вкладки */
@@ -310,10 +315,26 @@ body {
 	border: 1px solid #ccc;
 	border-top: none;
 }
+.tabcontent.has-active {
+	display: flex;
+}
 /* ============================= */
+.postman {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.postman-title {
+	padding: 5px;
+}
 .postman-card {
+	padding: 5px;
+}
+.postman-text {
+	padding: 5px;
 }
 .postman-card__img img {
+	width: 320px;
 }
 /*-------------------------GEO----------------------------------------*/
 .geo-block {
