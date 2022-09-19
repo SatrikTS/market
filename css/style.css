@@ -140,7 +140,11 @@ body {
 	font-size: x-large;
 }
 /* +++++++++++++++++++++++  MAIN  ++++++++++++++++++++++++++++ */
-.page {
+.page-main {
+	flex: 1 1 auto;
+	margin-top: 60px;
+}
+.page-aboutus {
 	flex: 1 1 auto;
 	margin-top: 60px;
 }
@@ -234,14 +238,15 @@ body {
 	justify-content: center;
 	text-align: center;
 	padding: 5px;
+	color: #257187;
 }
 .advise-info {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-top: 30px;
+	justify-content: center;
+	margin-top: 20px;
 }
 .partner-card {
 	background-color: #AFDBE7;
@@ -259,6 +264,101 @@ body {
 .partner-card__title {
 	text-align: center;
 }
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.whoarewe {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+.whoarewe__title {
+	padding-top: 10px;
+}
+.whoarewe__text {
+	padding-top: 10px;
+}
+.whoarewe__box {
+	padding-top: 10px;
+}
+.slideshow {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+}
+/* ------------------------------------ */
+.dotcontent {
+	width: 100%;
+	display: none;
+	justify-content: center;
+	padding: 6px 12px;
+	border-top: none;
+}
+.js-dotcontent {
+}
+.its-active {
+}
+.slide {
+}
+.slide img {
+}
+.slide__oreder {
+	position: absolute;
+}
+.slide__text {
+}
+/* --------------------------------------- */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	height: 25px;
+	width: 25px;
+	background-color: black;
+}
+.prev {
+	left: 0;
+	border-radius: 5px 0 0 5px;
+	margin-left: 5px;
+}
+.next {
+	right: 0;
+	border-radius: 0 5px 5px 0;
+	margin-right: 5px;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+/* ---------------------------------------- */
+.dot {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.dot button {
+	background-color: #FFC58A;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 0px 15px;
+	transition: 0.3s;
+}
+.dotlinks {
+}
+.js-dotlinks {
+}
+ /* Изменение цвета фона кнопок при наведении курсора */
+.dot button:hover {
+	background-color: #ddd;
+}
+
+ /* Создание активного/текущего класса связи вкладки */
+.dot button.its-active {
+	background-color: #257187;
+}
+.dotcontent.its-active {
+	display: flex;
+}
 /* +++++++++++++++++postman+++++++++++++++++++++++++++++ */
 .delivery {
 	margin: 30px 10px 0px 10px;
@@ -266,6 +366,7 @@ body {
 .delivery-title {
 	text-align: center;
 	size: 40px;
+	color: #257187;
 }
 .delivery-info {
 	display: flex;
@@ -294,7 +395,8 @@ body {
 	transition: 0.3s;
 	color: #FFC58A;
 	margin: 0px 25px;
-	font-size: x-large;
+	font-size: larger;
+	font-family: Manrope;
 }
 
  /* Изменение цвета фона кнопок при наведении курсора */
@@ -340,19 +442,28 @@ body {
 .geo-block {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 5px;
 	padding-bottom: 10px;
 	margin-top: 30px;
 }
-.geo-location {
+.location {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin: 5px;
 }
-.location {
-	padding: 5px;
+.location-title {
+	display: flex;
+	justify-content: center;
+	color: #257187;
 }
-.location iframe {
+.location-map {
+	display: flex;
+	padding: 5px;
+	margin-top: 20px;
+}
+.location-map iframe {
 	background-color: #AFDBE7;
 }
 /* +++++++++++++++++++++++++++++++FOOTER++++++++++++++++++++++ */
@@ -478,13 +589,7 @@ body {
 	.brand-block {
 		justify-content: center;
 	}
-	.geo-block {
-		flex-direction: column;
-	}
 	.postman-info {
-		justify-content: center;
-	}
-	.geo-location {
 		justify-content: center;
 	}
 	.social__list {
@@ -507,6 +612,14 @@ body {
 	.niche-card {
 		width: 30%;
 	}
+	.niche-card__title {
+		font-size: small;
+   }
+	.footer-block {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-bottom: 5px;
+   }
 }
 @media (max-width: 575.98px){
 	.container {
@@ -518,7 +631,14 @@ body {
 	.category-niches {
 		justify-content: center;
    }
-	.location iframe {
+	.tab button {
+		margin: 0px 5px;
+		font-size: medium;
+	}
+	.postman-card__img img {
+		width: 222px;
+   }
+	.location-map iframe {
 		width: 296px;
 		height: 296px;
 	}

@@ -8,43 +8,39 @@
 
 
 const toggleTabs = () => {
-	const btnTab = document.querySelectorAll(".js-tablinks");
-	const tabContent = document.querySelectorAll(".js-tabcontent");
+	const btnTab = document.querySelectorAll('.js-tablinks');
+	const tabContent = document.querySelectorAll('.js-tabcontent');
 	function removeActiveClass(param) {
 		param.forEach((item) => {
-			item.classList.remove( "has-active" );
+			item.classList.remove( 'has-active' );
 		})
 	}
 	btnTab.forEach((element, index) => {
-		element.addEventListener("click", () => {
+		element.addEventListener('click', () => {
 			removeActiveClass(btnTab);
 			removeActiveClass(tabContent);
-			element.classList.add( "has-active" );
-			tabContent[index].classList.add( "has-active" );
+			element.classList.add( 'has-active' );
+			tabContent[index].classList.add( 'has-active' );
 		})
 	})
 }
 toggleTabs()
 
-
-
-/* function openPost( evt, postName ) {
-	// Объявить все переменные
-	let i, tabcontent, tablinks;
-
-	// Получить все элементы с помощью class="tabcontent" и спрятать их
-	tabcontent = document.getElementsByClassName( "js-tabcontent" );
-	for ( i = 0; i < tabcontent.length; i++ ) {
-	tabcontent[i].style.display = "none";
+const toggleDots = () => {
+	const btnDot = document.querySelectorAll('.js-dotlinks');
+	const dotContent = document.querySelectorAll('.js-dotcontent');
+	function removeActiveClass(param) {
+		param.forEach((item) => {
+			item.classList.remove( 'its-active' );
+		})
 	}
-
-	// Получить все элементы с помощью class="tablinks" и удалить class " has-active"
-	tablinks = document.getElementsByClassName( "tablinks" ) ;
-	for ( i = 0; i < tablinks.length; i++ ) {
-	tablinks[i].className = tablinks[i].className.replace( " has-active", "");
-	}
-
-	// Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
-	document.getElementById(postName).style.display = "flex";
-	evt.currentTarget.className += " has-active";
-}; */
+	btnDot.forEach((element, index) => {
+		element.addEventListener('click', () => {
+			removeActiveClass(btnDot);
+			removeActiveClass(dotContent);
+			element.classList.add( 'its-active' );
+			dotContent[index].classList.add( 'its-active' );
+		})
+	})
+}
+toggleDots()
