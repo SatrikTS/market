@@ -264,101 +264,116 @@ body {
 .partner-card__title {
 	text-align: center;
 }
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.whoarewe {
+/* +++++++++++++++++++++++++++++++++++ */
+.whoweare{
+	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
+	min-width: 0;
+}
+.whowe-title {
+	text-align: center;
+}
+.whowe-text {
+	margin-top: 10px;
+	text-overflow: ;
+}
+/* ++++++++++++++++++ДЛЯ ВСЕХ СЛАЙДЕРОВ+++++++++++++++++++++ */
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{
 	margin-top: 10px;
 }
-.whoarewe__title {
-	padding-top: 10px;
-}
-.whoarewe__text {
-	padding-top: 10px;
-}
-.whoarewe__box {
-	padding-top: 10px;
-}
-.slideshow {
-	display: flex;
-	justify-content: center;
-	width: 100%;
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+/* ++++++++++++++++++++++SLIDER+++++++++++++++++++++++++ */
+.slider{
+	margin-top: 10px;
 	position: relative;
-}
-/* ------------------------------------ */
-.dotcontent {
+	min-width: 0;
 	width: 100%;
-	display: none;
-	justify-content: center;
-	padding: 6px 12px;
-	border-top: none;
 }
-.js-dotcontent {
-}
-.its-active {
-}
-.slide {
-}
-.slide img {
-}
-.slide__oreder {
-	position: absolute;
-}
-.slide__text {
-}
-/* --------------------------------------- */
-.prev, .next {
-	cursor: pointer;
+.slider .slick-arrow{
 	position: absolute;
 	top: 50%;
-	height: 25px;
-	width: 25px;
-	background-color: black;
-}
-.prev {
-	left: 0;
-	border-radius: 5px 0 0 5px;
-	margin-left: 5px;
-}
-.next {
-	right: 0;
-	border-radius: 0 5px 5px 0;
-	margin-right: 5px;
-}
-.prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
-}
-/* ---------------------------------------- */
-.dot {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-}
-.dot button {
-	background-color: #FFC58A;
-	height: 15px;
-	width: 15px;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
-	cursor: pointer;
+}
+.slider .slick-arrow.slick-prev {
+	left: 0;
+	background: #257187;
+}
+.slider .slick-arrow.slick-next {
+	right: 0;
+	background: #257187;
+}
+.slider .slick-arrow.slick-disabled {
+	opacity: 0.2;
+}
+.slider .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li {
+	list-style: none;
 	margin: 0px 15px;
-	transition: 0.3s;
 }
-.dotlinks {
+.slider .slick-dots button {
+	font-size: 0;
+	width: 20px;
+	height: 20px;
+	background-color: #257187;
+	border-radius: 50%;
 }
-.js-dotlinks {
+.slider .slick-dots li.slick-active button {
+	background-color: #FFC58A;
+	border: #257187;
 }
- /* Изменение цвета фона кнопок при наведении курсора */
-.dot button:hover {
-	background-color: #ddd;
+.slider__item {}
+.slider__item img {
+	width: 1200px;
 }
 
- /* Создание активного/текущего класса связи вкладки */
-.dot button.its-active {
-	background-color: #257187;
-}
-.dotcontent.its-active {
-	display: flex;
-}
 /* +++++++++++++++++postman+++++++++++++++++++++++++++++ */
 .delivery {
 	margin: 30px 10px 0px 10px;

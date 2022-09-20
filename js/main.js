@@ -5,8 +5,6 @@
 	});
 }());
 
-
-
 const toggleTabs = () => {
 	const btnTab = document.querySelectorAll('.js-tablinks');
 	const tabContent = document.querySelectorAll('.js-tabcontent');
@@ -25,22 +23,3 @@ const toggleTabs = () => {
 	})
 }
 toggleTabs()
-
-const toggleDots = () => {
-	const btnDot = document.querySelectorAll('.js-dotlinks');
-	const dotContent = document.querySelectorAll('.js-dotcontent');
-	function removeActiveClass(param) {
-		param.forEach((item) => {
-			item.classList.remove( 'its-active' );
-		})
-	}
-	btnDot.forEach((element, index) => {
-		element.addEventListener('click', () => {
-			removeActiveClass(btnDot);
-			removeActiveClass(dotContent);
-			element.classList.add( 'its-active' );
-			dotContent[index].classList.add( 'its-active' );
-		})
-	})
-}
-toggleDots()
