@@ -1,3 +1,22 @@
+$(document).ready(function(){
+	$('.js-slider').slick({
+		arrows:true,
+		dots:true,
+		adaptiveHeight:true,
+		slidesToShow:1,
+		slidesToScroll:1,
+		speed:500,
+		easing:'ease',
+		infinite:true,
+		initialSlide:0,
+		autoplay:false,
+		autoplaySpeed:7000,
+		pauseOnFocus:true,
+		pauseOnHover:true,
+		pauseOnDotsHover:true,
+	});
+});
+
 (function () {
 	let burger = document.querySelector('.js-burger');
 	burger.addEventListener('click', () => {
