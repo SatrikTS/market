@@ -57,7 +57,7 @@ body {
 	max-width: 1200px;
 	margin: 0px auto; /* выставил по центру */
 }
-/* +++++++++++++++++++++++++ HEADER ++++++++++++++++++++++++++++++++++ */
+/* ******************** HEADER ************************** */
 .header {
 	position: fixed;
 	top: 0;
@@ -124,7 +124,7 @@ body {
 .is-active .burger__line--third {
 	transform: translateY(-50%) rotate(-45deg);
 }
-/* ------------------------------------ */
+/* ------------------menu------------------ */
 .menu {
 }
 .menu__list {
@@ -139,7 +139,7 @@ body {
 	color: #FFC58A;
 	font-size: x-large;
 }
-/* +++++++++++++++++++++++  MAIN  ++++++++++++++++++++++++++++ */
+/* **********************  MAIN  ******************************** */
 .page-main {
 	flex: 1 1 auto;
 	margin-top: 60px;
@@ -148,46 +148,118 @@ body {
 	flex: 1 1 auto;
 	margin-top: 60px;
 }
-/* --------------------------CATEGORY------------------------- */
+/* ================= 1 category-block =================== */
 .category-block {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	margin: 5px;
-	padding-bottom: 10px;
+	width: 100%;
 }
-/* ----------------------------------- */
+/* +++++++++++++++ 2 category-elevation ++++++++++++++++ */
 .category-elevation {
 	display: flex;
-	min-width: fit-content;
-	justify-content: center;
-	background-color: #AFDBE7;
 	padding: 5px;
 	margin: 5px;
 }
 .elevation {
 	display: flex;
+	flex-direction: column;
 }
-.elevation__list {}
-.elevation__item {
-	padding: 5px;
+.elevation li {
+/* 	position: relative; */
+}
+.elevation__list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .elevation__link {
+	display: flex;
 	width: 100%;
 	font-size: large;
+	padding: 5px;
+	color: #257187;
 }
-/* ------------------------------------- */
+/* +++++++++++++++++++ 2 category-main ++++++++++++++++++++++++ */
+.category-main{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	padding: 5px;
+	margin: 5px;
+}
+/* -------------------------- 3 slideshow ----------------------- */
+.slideshow {
+	display: flex;
+	width: 100%;
+}
+/* ___________________________ 4 slider _________________________ */
+.slider {
+	margin-top: 10px;
+	position: relative;
+	min-width: 0;
+	width: 100%;
+}
+.slider .slick-arrow{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	background: none;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-radius: 25%;
+}
+.slider .slick-arrow.slick-prev {
+	left: 0;
+	border-right: 40px solid #FFFFFF;
+}
+.slider .slick-arrow.slick-next {
+	right: 0;
+	border-left: 40px solid #FFFFFF;
+}
+.slider .slick-arrow.slick-disabled {
+	opacity: 0.2;
+}
+.slider .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li {
+	list-style: none;
+	margin: 0px 15px;
+}
+.slider .slick-dots button {
+	font-size: 0;
+	width: 15px;
+	height: 15px;
+	background-color: #257187;
+	border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button {
+	background-color: #FFC58A;
+	border: #257187;
+}
+.slider__item {}
+.slider__item img {
+	width: 100%;
+}
+/* ------------------- 3 category-niches ------------------ */
 .category-niches {
 	display: flex;
 	align-items: stretch;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	left: 0;
 }
 .niche-card {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 23%;
+	width: 32%;
 	background-color: #AFDBE7;
 	padding: 5px;
 	margin: 5px;
@@ -205,7 +277,7 @@ body {
 	margin-bottom: 5px;
 	text-align: center;
 }
-/* -------------------------BRAND------------------------------------*/
+/* =================== 1 brand-block ===================== */
 .brand-block {
 	display: flex;
 	flex-wrap: wrap;
@@ -224,7 +296,7 @@ body {
 }
 .brand-card__link {
 }
-/* ----------------------------advise-------------------------------- */
+/* ===================== 1 advise-block ========================= */
 .advise-block {
 	display: flex;
 	flex-direction: column;
@@ -264,102 +336,63 @@ body {
 .partner-card__title {
 	text-align: center;
 }
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.whoarewe {
+/* ================== 1 whoweare ========================= */
+.whoweare {
+	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
+	min-width: 0;
+}
+.whowe-title {
+	text-align: center;
+}
+.whowe-text {
 	margin-top: 10px;
 }
-.whoarewe__title {
-	padding-top: 10px;
+/* ++++++++++++++++++ДЛЯ ВСЕХ СЛАЙДЕРОВ+++++++++++++++++++++ */
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
 }
-.whoarewe__text {
-	padding-top: 10px;
-}
-.whoarewe__box {
-	padding-top: 10px;
-}
-.slideshow {
+/* Лента слайдов */
+.slick-track{
 	display: flex;
-	justify-content: center;
-	width: 100%;
-	position: relative;
+	align-items: flex-start;
 }
-/* ------------------------------------ */
-.dotcontent {
-	width: 100%;
-	display: none;
-	justify-content: center;
-	padding: 6px 12px;
-	border-top: none;
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{
 }
-.js-dotcontent {
-}
-.its-active {
-}
-.slide {
-}
-.slide img {
-}
-.slide__oreder {
-	position: absolute;
-}
-.slide__text {
-}
-/* --------------------------------------- */
-.prev, .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	height: 25px;
-	width: 25px;
-	background-color: black;
-}
-.prev {
-	left: 0;
-	border-radius: 5px 0 0 5px;
-	margin-left: 5px;
-}
-.next {
-	right: 0;
-	border-radius: 0 5px 5px 0;
-	margin-right: 5px;
-}
-.prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
-}
-/* ---------------------------------------- */
-.dot {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-}
-.dot button {
-	background-color: #FFC58A;
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	cursor: pointer;
-	margin: 0px 15px;
-	transition: 0.3s;
-}
-.dotlinks {
-}
-.js-dotlinks {
-}
- /* Изменение цвета фона кнопок при наведении курсора */
-.dot button:hover {
-	background-color: #ddd;
-}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
 
- /* Создание активного/текущего класса связи вкладки */
-.dot button.its-active {
-	background-color: #257187;
-}
-.dotcontent.its-active {
-	display: flex;
-}
-/* +++++++++++++++++postman+++++++++++++++++++++++++++++ */
+/* =================== 1 delivery ==================== */
 .delivery {
 	margin: 30px 10px 0px 10px;
 }
@@ -375,52 +408,6 @@ body {
 	justify-content: center;
 	margin-top: 20px;
 }
-/* ============================ */
-/* Стиль вкладки */
-.tab {
-	display: flex;
-	justify-content: space-around;
-	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #257187;
-}
-
- /* Стиль кнопок, которые используются для открытия содержимого вкладки */
-.tab button {
-	background-color: inherit;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	transition: 0.3s;
-	color: #FFC58A;
-	margin: 0px 25px;
-	font-size: larger;
-	font-family: Manrope;
-}
-
- /* Изменение цвета фона кнопок при наведении курсора */
-.tab button:hover {
-	background-color: #ddd;
-}
-
- /* Создание активного/текущего класса связи вкладки */
-.tab button.has-active {
-	background-color: red;
-}
-
- /* Стиль содержимого вкладки */
-.tabcontent {
-	display: none;
-	justify-content: center;
-	padding: 6px 12px;
-	border: 1px solid #ccc;
-	border-top: none;
-}
-.tabcontent.has-active {
-	display: flex;
-}
-/* ============================= */
 .postman {
 	display: flex;
 	flex-direction: column;
@@ -438,7 +425,49 @@ body {
 .postman-card__img img {
 	width: 320px;
 }
-/*-------------------------GEO----------------------------------------*/
+/* ++++++++++++++++++++++++++ tab ++++ tabcontent ++++++++++++++++++ */
+/* Стиль вкладки */
+.tab {
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #257187;
+}
+ /* Стиль кнопок, которые используются для открытия содержимого вкладки */
+.tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	color: #FFC58A;
+	margin: 0px 25px;
+	font-size: larger;
+	font-family: Manrope;
+}
+ /* Изменение цвета фона кнопок при наведении курсора */
+.tab button:hover {
+	background-color: #ddd;
+}
+ /* Создание активного/текущего класса связи вкладки */
+.tab button.has-active {
+	background-color: red;
+}
+ /* Стиль содержимого вкладки */
+.tabcontent {
+	display: none;
+	justify-content: center;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.tabcontent.has-active {
+	display: flex;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================= 1 geo-block =================*/
 .geo-block {
 	display: flex;
 	flex-direction: row;
@@ -605,6 +634,9 @@ body {
 @media (max-width: 767.98px){
 	.menu {
 		display: none;
+	}
+	.elevation__link {
+		font-size: medium;
 	}
 	.category-niches {
 		justify-content: center;
