@@ -44,7 +44,7 @@ body {
 	height: 100%;
 	line-height: 1;
 	color: #333333;
-	background: #FFFFFF;
+	background: #224b44;
 	font-family: Manrope;
 }
 .wrapper-page {
@@ -56,15 +56,16 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0px auto; /* выставил по центру */
+	background: #FFFFFF;
 }
 /* ******************** HEADER ************************** */
 .header {
 	position: fixed;
 	top: 0;
 	font-weight: 800;
-	background-color: #257187;
+	background-color: #224b44;
 	width: 100%;
-	z-index: 10;
+	z-index: 100;
 }
 .header-block {
 	display: flex;
@@ -72,10 +73,11 @@ body {
 	justify-content: space-between;
 	padding: 0px 20px;
 	min-height: 60px;
+	background: #224b44;
 }
 .header-logo {
 	position: relative;
-	background-color: #FFC58A;
+	background-color: #febd17;
 	border-radius: 15%;
 	z-index: 5;
 	width: 40px;
@@ -92,14 +94,14 @@ body {
 	cursor: pointer;
 	position: relative;
 	border-radius: 15%;
-	background-color: #257187;
+	background-color: #224b44;
 }
 .burger__line {
 	display: block;
 	width: 100%;
 	height: 5px;
 	border-radius: 15%;
-	background-color: #FFC58A;
+	background-color: #febd17;
 	position: absolute;
 	left: 0;
 	transition: 0.3s all linear;
@@ -136,7 +138,7 @@ body {
 	margin: 0px 0px 0px 20px;
 }
 .menu__link {
-	color: #FFC58A;
+	color: #febd17;
 	font-size: x-large;
 }
 /* **********************  MAIN  ******************************** */
@@ -148,22 +150,47 @@ body {
 	flex: 1 1 auto;
 	margin-top: 60px;
 }
+.page-catalog {
+	flex: 1 1 auto;
+	margin-top: 60px;
+}
+.page-contacts {
+	flex: 1 1 auto;
+	margin-top: 60px;
+}
+.page-stock {
+	flex: 1 1 auto;
+	margin-top: 60px;
+}
+.page-privacy {
+	flex: 1 1 auto;
+	margin-top: 60px;
+}
+/* ================= 1 privacy-block ================== */
+.privacy-block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.privacy {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+}
 /* ================= 1 category-block =================== */
 .category-block {
 	display: flex;
 	justify-content: space-between;
-	margin: 5px;
 	width: 100%;
 }
 /* +++++++++++++++ 2 category-elevation ++++++++++++++++ */
 .category-elevation {
 	display: flex;
-	padding: 5px;
-	margin: 5px;
 }
 .elevation {
 	display: flex;
 	flex-direction: column;
+	margin-top: 10px;
 }
 .elevation li {
 /* 	position: relative; */
@@ -178,20 +205,19 @@ body {
 	width: 100%;
 	font-size: large;
 	padding: 5px;
-	color: #257187;
+	color: #224b44;
 }
 /* +++++++++++++++++++ 2 category-main ++++++++++++++++++++++++ */
 .category-main{
 	display: flex;
 	flex-direction: column;
-	width: 80%;
-	padding: 5px;
-	margin: 5px;
+	width: 85%;
 }
 /* -------------------------- 3 slideshow ----------------------- */
 .slideshow {
 	display: flex;
 	width: 100%;
+	padding: 0px 5px;
 }
 /* ___________________________ 4 slider _________________________ */
 .slider {
@@ -211,15 +237,15 @@ body {
 	background: none;
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
-	border-radius: 25%;
+	border-radius: 50%;
 }
 .slider .slick-arrow.slick-prev {
 	left: 0;
-	border-right: 40px solid #FFFFFF;
+	border-right: 20px solid #FFFFFF;
 }
 .slider .slick-arrow.slick-next {
 	right: 0;
-	border-left: 40px solid #FFFFFF;
+	border-left: 20px solid #FFFFFF;
 }
 .slider .slick-arrow.slick-disabled {
 	opacity: 0.2;
@@ -237,11 +263,11 @@ body {
 	font-size: 0;
 	width: 15px;
 	height: 15px;
-	background-color: #257187;
+	background-color: #224b44;
 	border-radius: 50%;
 }
 .slider .slick-dots li.slick-active button {
-	background-color: #FFC58A;
+	background-color: #febd17;
 	border: #257187;
 }
 .slider__item {}
@@ -259,10 +285,11 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 32%;
+	width: 31%;
 	background-color: #AFDBE7;
 	padding: 5px;
 	margin: 5px;
+
 }
 .niche-card__img {
 	text-align: center;
@@ -271,7 +298,7 @@ body {
 .card-link {}
 
 .niche-card__img img {
-	max-height: 70px;
+	max-height: 90px;
 }
 .niche-card__title {
 	margin-bottom: 5px;
@@ -317,37 +344,25 @@ body {
 	flex-direction: row;
 	align-items: stretch;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	margin-top: 20px;
 }
 .partner-card {
 	background-color: #AFDBE7;
+	width: 23%;
 	padding: 5px;
 	margin: 5px;
 }
 .partner-card__img {
 }
 .partner-card__img img {
-	width: 264px;
-	height: 213px;
+	width: 100%;
 }
 .partner-card__link {
 }
 .partner-card__title {
 	text-align: center;
-}
-/* ================== 1 whoweare ========================= */
-.whoweare {
-	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-}
-.whowe-title {
-	text-align: center;
-}
-.whowe-text {
-	margin-top: 10px;
+	font-size: large;
 }
 /* ++++++++++++++++++ДЛЯ ВСЕХ СЛАЙДЕРОВ+++++++++++++++++++++ */
 /* Слайдер */
@@ -392,14 +407,156 @@ body {
 /* Элемент точки */
 .slick-dots li button{}
 
+/* ================== 1 whoweare ========================= */
+.whoweare {
+	margin: 0px 5px 0px 5px;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	padding-top: 10px;
+}
+.whowe-title {
+	text-align: center;
+}
+.whowe-text {
+	line-height: 2em;
+	margin-top: 10px;
+	width: 100%;
+}
+/* ___________________________ 4 carousel _________________________ */
+.carousel {
+	margin-top: 10px;
+	position: relative;
+	min-width: 0;
+	width: 100%;
+}
+.carousel .slick-arrow{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	background: none;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-radius: 50%;
+}
+.carousel .slick-arrow.slick-prev {
+	left: 0;
+	border-right: 20px solid #FFFFFF;
+}
+.carousel .slick-arrow.slick-next {
+	right: 0;
+	border-left: 20px solid #FFFFFF;
+}
+.carousel .slick-arrow.slick-disabled {
+	opacity: 0.2;
+}
+.carousel .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.carousel .slick-dots li {
+	list-style: none;
+	margin: 0px 15px;
+}
+.carousel .slick-dots button {
+	font-size: 0;
+	width: 15px;
+	height: 15px;
+	background-color: #224b44;
+	border-radius: 50%;
+}
+.carousel .slick-dots li.slick-active button {
+	background-color: #febd17;
+	border: #224b44;
+}
+.carousel__item {}
+.carousel__item img {
+	width: 100%;
+}
+/* ================== 1 goods ========================= */
+.goods {
+	margin: 0px 5px 0px 5px;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	padding-top: 10px;
+}
+.goods-title {
+	text-align: center;
+}
+.goods-text {
+	line-height: 2em;
+	margin-top: 10px;
+	width: 100%;
+}
+/* ___________________________ 4 sale _________________________ */
+.sale {
+	margin-top: 10px;
+	position: relative;
+	min-width: 0;
+	width: 100%;
+}
+.sale .slick-arrow{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	background: none;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-radius: 50%;
+}
+.sale .slick-arrow.slick-prev {
+	left: 0;
+	border-right: 20px solid #FFFFFF;
+}
+.sale .slick-arrow.slick-next {
+	right: 0;
+	border-left: 20px solid #FFFFFF;
+}
+.sale .slick-arrow.slick-disabled {
+	opacity: 0.2;
+}
+.sale .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sale .slick-dots li {
+	list-style: none;
+	margin: 0px 15px;
+}
+.sale .slick-dots button {
+	font-size: 0;
+	width: 15px;
+	height: 15px;
+	background-color: #224b44;
+	border-radius: 50%;
+}
+.sale .slick-dots li.slick-active button {
+	background-color: #febd17;
+	border: #224b44;
+}
+.sale__item {}
+.sale__item img {
+	width: 100%;
+}
 /* =================== 1 delivery ==================== */
 .delivery {
-	margin: 30px 10px 0px 10px;
+	margin-top: 30px;
 }
 .delivery-title {
 	text-align: center;
 	size: 40px;
-	color: #257187;
+	color: #224b44;
 }
 .delivery-info {
 	display: flex;
@@ -432,7 +589,7 @@ body {
 	justify-content: space-around;
 	overflow: hidden;
 	border: 1px solid #ccc;
-	background-color: #257187;
+	background-color: #224b44;
 }
  /* Стиль кнопок, которые используются для открытия содержимого вкладки */
 .tab button {
@@ -442,7 +599,7 @@ body {
 	cursor: pointer;
 	padding: 14px 16px;
 	transition: 0.3s;
-	color: #FFC58A;
+	color: #febd17;
 	margin: 0px 25px;
 	font-size: larger;
 	font-family: Manrope;
@@ -453,7 +610,9 @@ body {
 }
  /* Создание активного/текущего класса связи вкладки */
 .tab button.has-active {
-	background-color: red;
+	background-color: #febd17;
+	color: #224b44;
+   font-size: x-large;
 }
  /* Стиль содержимого вкладки */
 .tabcontent {
@@ -467,48 +626,60 @@ body {
 	display: flex;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* ================= 1 geo-block =================*/
-.geo-block {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin: 5px;
-	padding-bottom: 10px;
-	margin-top: 30px;
-}
-.location {
+/* ================= 1 geo =================*/
+.geo {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 5px;
+	padding: 10px 0px;
 }
-.location-title {
+.geo-title {
 	display: flex;
+	align-items: center;
 	justify-content: center;
-	color: #257187;
+	color: #224b44;
+}
+.location {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 20px 5px 5px 5px;
+}
+.location-info {
+	display: flex;
+	flex-direction: column;
+}
+.location-info__adress {
+	margin-top: 10px;
+}
+.location-info__text{
+	line-height: 2em;
+	margin-top: 10px;
+	width: 100%;
 }
 .location-map {
 	display: flex;
 	padding: 5px;
-	margin-top: 20px;
 }
 .location-map iframe {
 	background-color: #AFDBE7;
 }
 /* +++++++++++++++++++++++++++++++FOOTER++++++++++++++++++++++ */
 .footer {
-	background-color: #257187;
+	background-color: #224b44;
+	margin-top: 20px;
 }
 /* ---------------------------------------- */
 .footer-wrapper {
 	display: flex;
 	flex-direction: column;
+	background: #224b44;
 }
 /* ------------------------------------------ */
 .footer-block {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	margin: 5px;
 	padding-bottom: 10px;
 }
@@ -517,7 +688,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	color: #FFC58A;
+	color: #febd17;
 	padding: 5px;
 	margin: 15px;
 }
@@ -534,14 +705,14 @@ body {
 	position: relative;
 }
 .safety__link {
-	color: #FFC58A;
+	color: #febd17;
 }
 /* --------------------------ourcompany--------------------- */
 .ourcompany {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	color: #FFC58A;
+	color: #febd17;
 	padding: 5px;
 	margin: 15px;
 }
@@ -557,14 +728,14 @@ body {
 	padding-top: 10px;
 }
 .ourcompany__link {
-	color: #FFC58A;
+	color: #febd17;
 }
 /* -------------------------workwithus------------------------ */
 .workwithus {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	color: #FFC58A;
+	color: #febd17;
 	padding: 5px;
 	margin: 15px;
 }
@@ -579,7 +750,7 @@ body {
 	padding-top: 10px;
 }
 .workwithus__link {
-	color: #FFC58A;
+	color: #febd17;
 }
 /* --------------------------------------------------- */
 /* -----------------------social--------------------------- */
@@ -608,18 +779,25 @@ body {
 	margin: 10px;
 }
 .copy {
-	color: #FFC58A;
+	color: #febd17;
 }
 /* ----------------------------------- */
 @media (max-width: 1023.98px){
 	.container {
 		max-width: 768px;
 	}
+	.category-main {
+		width: 80%;
+   }
 	.brand-block {
 		justify-content: center;
 	}
 	.postman-info {
 		justify-content: center;
+	}
+	.location-map iframe {
+		width: 276px;
+		height: 276px;
 	}
 	.social__list {
 		flex-direction: row;
@@ -632,19 +810,26 @@ body {
 	}
 }
 @media (max-width: 767.98px){
+	.container {
+		max-width: 575.98px;
+	}
 	.menu {
 		display: none;
+	}
+	.category-block {
+		flex-direction: column;
+		justify-content: center;
 	}
 	.elevation__link {
 		font-size: medium;
 	}
-	.category-niches {
-		justify-content: center;
-   }
-	.niche-card {
-		width: 30%;
+	.category-main {
+		width: 100%;
 	}
 	.niche-card__title {
+		font-size: small;
+   }
+	.partner-card__title {
 		font-size: small;
    }
 	.footer-block {
@@ -657,11 +842,11 @@ body {
 	.container {
 		max-width: none;
 	}
-	.category-block {
-		flex-direction: column-reverse;
-   }
 	.category-niches {
 		justify-content: center;
+   }
+	.partner-card {
+		width: 45%;
    }
 	.tab button {
 		margin: 0px 5px;
@@ -670,9 +855,12 @@ body {
 	.postman-card__img img {
 		width: 222px;
    }
-	.location-map iframe {
-		width: 296px;
-		height: 296px;
+	.location {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.location-map {
+		justify-content: center;
 	}
 	.footer-block {
 		flex-direction: column;
