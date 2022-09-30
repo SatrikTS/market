@@ -47,7 +47,7 @@ $(document).ready(function(){
 		infinite:true,
 		initialSlide:0,
 		autoplay:true,
-		autoplaySpeed:2000,
+		autoplaySpeed:1000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
 		pauseOnDotsHover:true,
