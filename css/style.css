@@ -95,6 +95,7 @@ body {
 	position: relative;
 	border-radius: 15%;
 	background-color: rgba(0,69,76,1);
+	z-index: 5;
 }
 .burger__line {
 	display: block;
@@ -147,6 +148,11 @@ body {
 .menu__link:hover {
 	color: #FFB97B;
 }
+/* ********************************mobmenu****************************** */
+.mobmenu {
+	display: none;
+}
+/* ************************************************************** */
 /* **********************  MAIN  ******************************** */
 .page-main {
 	flex: 1 1 auto;
@@ -720,6 +726,7 @@ body {
 .footer {
 	padding-bottom: 16px;
 	background: linear-gradient(90deg, rgba(0,138,154,1) 33%, rgba(0,112,124,1) 66%, rgba(0,69,76,1) 100%);
+	z-index: 7;
 }
 /* ---------------------------------------- */
 .footer-wrapper {
@@ -888,7 +895,36 @@ body {
 		max-width: 575.98px;
 	}
 	.menu {
-		display: none;
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 290px;
+		background: #FFFFFF;
+		padding: 60px 24px 24px 24px;
+		transition: left 0.3s ease 0s;
+	}
+	.menu.to-active {
+		left: 0;
+	}
+	.menu::before{
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 48px;
+		background: linear-gradient(90deg, rgba(0,138,154,1) 33%, rgba(0,112,124,1) 66%, rgba(0,69,76,1) 100%);
+		z-index: 2;
+	}
+	.menu__list {
+		display: block;
+		flex-direction: column;
+	}
+	.menu__link {
+		font-size: 21px;
+		line-height: 42px;
+		color: #008a9a;
 	}
 	.category-block {
 		flex-direction: column;
