@@ -56,10 +56,14 @@ $(document).ready(function(){
 
 (function () {
 	let burger = document.querySelector('.js-burger');
+	let menu = document.querySelector('.js-menu');
 	burger.addEventListener('click', () => {
 		burger.classList.toggle('is-active');
+		menu.classList.toggle('to-active');
 	});
 }());
+
+
 
 const toggleTabs = () => {
 	const btnTab = document.querySelectorAll('.js-tablinks');
