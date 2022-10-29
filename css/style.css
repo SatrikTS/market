@@ -35,10 +35,14 @@ h6 {
 	font-weight: inherit;
 }
 h1 {
-	font-size: 36px;
+	font-size: 32px;
 }
 h2 {
+	font-size: 28px;
 	font-weight: bold;
+}
+h3 {
+	font-size: 24px;
 }
 html {
 	height: 100%;
@@ -140,7 +144,7 @@ body {
 }
 .menu__link {
 	color: #FFFFFF;
-	font-size: 21px;
+	font-size: 24px;
 	line-height: 32px;
 	font-weight: bold;
 	transition: color 0.2s ease-in;
@@ -664,13 +668,13 @@ body {
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* ================= 1 geo =================*/
-.geo {
+.contacts {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin-bottom: 32px;
 }
-.geo-title {
+.contacts-title {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -678,23 +682,35 @@ body {
 	color: #008a9a;
 	margin-bottom: 32px;
 }
-.location {
+.contacts-block {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
-.location-info {
+.location {
 	display: flex;
 	flex-direction: column;
 	padding-left: 8px;
 }
-.location-info__adress {
-	margin-top: 10px;
+.location__city {
+	color: #FFB97B;
+	font-weight: bold;
 }
-.location-info__text{
+.location-info {
+	margin-top: 32px;
+}
+.location-info__label {
+	font-size: 24px;
+	line-height: 2em;
+	margin-top: 16px;
+	font-weight: bold;
+}
+.location-info__text {
+	font-size: 21px;
 	line-height: 2em;
 	margin-top: 10px;
-	width: 100%;
+	color: #008a9a;
+	text-decoration: none;
 }
 .location-map {
 	display: flex;
